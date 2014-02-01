@@ -1,8 +1,8 @@
 var yelp = require("yelp").createClient({
-  consumer_key: YELP_CONSUMER_KEY, 
-  consumer_secret: YELP_CONSUMER_SECRET,
-  token: YELP_TOKEN,
-  token_secret: YELP_TOKEN_SECRET
+  consumer_key: process.env.YELP_CONSUMER_KEY, 
+  consumer_secret: process.env.YELP_CONSUMER_SECRET,
+  token: process.env.YELP_TOKEN,
+  token_secret: process.env.YELP_TOKEN_SECRET
 });
 
 //req format:
