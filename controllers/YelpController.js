@@ -7,8 +7,8 @@ var yelp = require("yelp").createClient({
 
 //req format:
 //lat: latitude of search area
-//lon: longitude of ..
-//
+//lon: longitude of search area
+//outputs a random restaurant selected from 20 restaurants in the area
 exports.getRestaurants = function(req, res) {
   var lat = req.body.lat;
   var lon = req.body.lon;
@@ -19,12 +19,3 @@ exports.getRestaurants = function(req, res) {
     res.json(data.businesses[num]);
   });
 }
-
-// See http://www.yelp.com/developers/documentation/v2/search_api
-
-
-// See http://www.yelp.com/developers/documentation/v2/business
-// yelp.business("yelp-san-francisco", function(error, data) {
-//   console.log(error);
-//   console.log(data);
-// });
