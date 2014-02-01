@@ -15,7 +15,7 @@ exports.getRestaurants = function(req, res) {
   yelp.search({term: "restaurants", ll: lat + "," + lon, limit: "20"}, function(error, data) {
     console.log(error);
     console.log(data);
-    var num = Math.random() * 20;
+    var num = Math.ceil(Math.random() * 20);
     res.json(data.businesses[num]);
   });
 }
