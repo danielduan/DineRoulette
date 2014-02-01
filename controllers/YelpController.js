@@ -15,7 +15,7 @@ exports.getRestaurants = function(req, res) {
   yelp.search({term: "restaurants", ll: lat + "," + lon, limit: "20"}, function(error, data) {
     console.log(error);
     console.log(data);
-    res.json(data);
+    res.json(data.businesses);
   });
 }
 
