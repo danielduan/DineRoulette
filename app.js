@@ -29,7 +29,7 @@ if ('development' == app.get('env')) {
 }
 
 //Mobile APIs
-app.get('/mobile/v1/getrestaurants', MobileRoutes.getRestaurants);
+app.post('/mobile/v1/getrestaurants', MobileRoutes.getRestaurants);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
